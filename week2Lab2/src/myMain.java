@@ -14,7 +14,7 @@ public class myMain {
 	 * @return A new String, whose content is the reverse of the input one.
 	 * 
 	 */
-	public static String reverse(String s){
+	/*public static String reverse(String s){
 		
 		String reverse = "";
 		int length = s.length();
@@ -22,6 +22,14 @@ public class myMain {
 			reverse = reverse + s.charAt(i);
 		}
 		return reverse;	
+	}*/
+	
+	public static String reverse(String s){
+		String reverse = s;
+		for(int i = s.length() -1; i >= 0; i--){
+			System.out.print(s.charAt(i));
+		} 
+		return reverse;
 	}
 	
 	//--------------------------------------------------
