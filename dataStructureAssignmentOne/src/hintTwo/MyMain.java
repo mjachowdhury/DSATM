@@ -23,14 +23,11 @@ public class MyMain {
 		// -------------------------------------
 		// 2. isEmpty
 		// -------------------------------------
-		System.out.println("Is it empty: " + m.isEmpty()); // --> The current
-															// length is 0 as
-															// myDynamicQueue is
-															// created initially
-															// empty
+		// --> The current length is 0 as myDynamicQueue is created initially empty
+		System.out.println("Is it empty: " + m.isEmpty()); 
 
 		// -------------------------------------
-		// 3. Add three elements
+		// 3. Adding elements elements
 		// -------------------------------------
 		System.out.println();
 		System.out.println("============Adding Elements================================");

@@ -15,8 +15,6 @@ public class MyDynamicQueue {
 	// -------------------------------------------------------------------
 	public MyDynamicQueue() {
 		this.first = null;
-		// this.last = null;
-		// this.size = 0;
 	}
 
 	// -------------------------------------------------------------------
@@ -53,9 +51,8 @@ public class MyDynamicQueue {
 			last = current;
 			System.out.println("ADDED ELEMENT : " + last.getInfo());
 		}
-
 		size++;
-	}
+	}//end of add method
 
 	// -------------------------------------------------------------------
 	// Basic Operation (Partial) --> Remove element from front of
@@ -63,7 +60,6 @@ public class MyDynamicQueue {
 	// -------------------------------------------------------------------
 	public void remove() {
 		if (first == null) {
-
 			System.out.println("NO ELEMENT LEFT TO REMOVE.");
 		} else {
 			if (first == last) {
@@ -73,8 +69,8 @@ public class MyDynamicQueue {
 				first = first.getNext();
 				System.out.println("REMOVED FROM FIRST ELEMENT: " + first.getInfo());
 			}
-		}
+		}//end of else
 
-	}// end of method
+	}// end of remove method
 
-}
+}//end of class
