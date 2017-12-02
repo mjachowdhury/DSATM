@@ -169,8 +169,7 @@ public class DivideAndConquerAlgorithms {
 	public int getNumAppearances(MyDynamicList m, int n)
 	{
 		int res = m.countNumberOfApperence(n);
-		return res;
-		
+		return res;		
 	}
 
 	//-------------------------------------------------------------------
@@ -185,14 +184,20 @@ public class DivideAndConquerAlgorithms {
 
 	public int power(int n, int m) 
 	{
+		//if no power then return 1
 		if (m == 0) 
 		{
 			return 1;
-		} else if (n % 2 == 0) 
+		} 
+		//if base is divided and no reminder then
+		//doing recursive calling power method and then 'm' is divided by 2 that result is multiplying 
+		else if (n % 2 == 0) 
 		{
 			int res = power(n, m / 2);
 			return res * res;
-		} else 
+		} 
+		//here base is multiplying by recursive method power with 'm' which is power subtract by 1
+		else 
 		{
 			return n * power(n, m - 1);
 		}
@@ -282,16 +287,16 @@ public class DivideAndConquerAlgorithms {
 	// -------------------------------------------------------------------
 	/**
 	 * The function prints prints a pattern of a given length. * ** *** ...
-	 * 
-	 * @param n:
-	 *            The length of the desired pattern
+	 * @param n: The length of the desired pattern
 	 */
 	public void drawImage(int n) 
 	{
+		//if length is 0 then print nothing
 		if (n == 0) 
 		{
 			System.out.println();
-		} else 
+		} 
+		else 
 		{
 			System.out.print("*");
 			drawImage(n - 1);
@@ -303,9 +308,12 @@ public class DivideAndConquerAlgorithms {
 	// -------------------------------------------------------------------
 	public void drawLine(int n) 
 	{
-		if (n == 0) {
+		//if length is 0 then print nothing
+		if (n == 0) 
+		{
 			System.out.println();
-		} else 
+		} 
+		else 
 		{
 			System.out.print("-");
 			drawLine(n - 1);

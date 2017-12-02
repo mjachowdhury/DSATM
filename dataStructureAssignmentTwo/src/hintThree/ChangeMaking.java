@@ -41,43 +41,22 @@ public class ChangeMaking {
 	 * @param val the target sum
 	 * @return the number of coins needed
 	 */
-	 	
+	 
+	
 	public static int makeChangeGreedy(int[] coins, int amount) {
-		int[] coinReq = new int[amount + 1]; // this will store the optimal	solution for all the values -- from 0 to given amount.
-		
-		int[] CC = new int[coins.length]; // resets for every smaller problems and minimum in it is the optimal solution for the smaller problem.
-		
-		coinReq[0] = 0; // 0 coins are required to make the change for 0
-		
-		// now solve for all the amounts
-		for (int amt = 1; amt <= amount; amt++) 
-		{
-			for (int j = 0; j < CC.length; j++) 
-			{
-				CC[j] = -1;
-			}
-			// Now try taking every coin one at a time and fill the solution in the CC[]
-			for (int j = 0; j < coins.length; j++) 
-			{
-				if (coins[j] <= amt) 
-				{ // check if coin value is less than amount
-					CC[j] = coinReq[amt - coins[j]] + 1; // if available, select the coin and add 1 to solution of (amount-coin value)
-				}
-			}
-			// Now solutions for amt using all the coins is stored in CC[]
-			// take out the minimum (optimal) and store in coinReq[amt]
-			coinReq[amt] = -1;
-			for (int j = 1; j < CC.length; j++) 
-			{
-				if (CC[j] > 0 && (coinReq[amt] == -1 || coinReq[amt] > CC[j])) 
-				{
-					coinReq[amt] = CC[j];
-				}
+		int noCoins = 0;
+		for (int i = 0; i < coins.length; i++) {
+			if (amount >= coins[i]) {
+				noCoins += amount / coins[i];
+				amount %= coins[i];
 			}
 		}
-		// return the optimal solution for amount
-		return coinReq[amount];
+		if (amount > 0)
+			return (Integer.MAX_VALUE);
+		else
+			return (noCoins);
 	}
+
 	
 	/**
 	 * Main.

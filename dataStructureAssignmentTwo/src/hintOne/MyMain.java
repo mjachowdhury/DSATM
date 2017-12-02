@@ -139,10 +139,7 @@ public class MyMain {
 
 	/**
 	 * Main Method.
-	 * 
-	 * @param args:
-	 *            We will run the program parameter free, so do not worry about
-	 *            it.
+	 * @param args: We will run the program parameter free, so do not worry about it.
 	 */
 	public static void main(String[] args) {
 		test();

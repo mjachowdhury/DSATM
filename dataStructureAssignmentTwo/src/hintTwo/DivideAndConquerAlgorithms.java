@@ -132,10 +132,13 @@ public class DivideAndConquerAlgorithms {
 		// I. SCENARIO IDENTIFICATION
 		// -----------------------------
 		int scenario = 0;
+		// Rule 1. MyList is empty
 		if (m.length() == 0)
 			scenario = 0;
+		// Rule 2. MyDynamicList is non-empty
 		if (m.length() == 1)
 			scenario = 1;
+		// Rule 3. MyDynamicList is non-empty
 		if (m.length() > 1)
 			scenario = 2;
 
@@ -148,13 +151,17 @@ public class DivideAndConquerAlgorithms {
 			break;
 		case 1:
 			res = new MyDynamicList();
+			//if 0th index number is less than 'e' than adding this number to the 0th index
 			if (m.getElement(0) < e)
 				res.addElement(0, m.getElement(0));
 			break;
 		case 2:
+			//getting 0th index number and storing it int e0
+			//then removing the elements from 0th index
 			int e0 = m.getElement(0);
 			m.removeElement(0);
 			res = smallerMyList(m, e);
+			//if e0 number is less than 'e' then adding that elements to the MyDynamicList 0th index
 			if (e0 < e)
 				res.addElement(0, e0);
 			m.addElement(0, e0);
@@ -192,10 +199,13 @@ public class DivideAndConquerAlgorithms {
 		// I. SCENARIO IDENTIFICATION
 		// -----------------------------
 		int scenario = 0;
+		// Rule 1. MyList is empty
 		if (m.length() == 0)
 			scenario = 0;
+		// Rule 2. MyDynamicList is non-empty
 		if (m.length() == 1)
 			scenario = 1;
+		// Rule 3. MyDynamicList is non-empty
 		if (m.length() > 1)
 			scenario = 2;
 		// -----------------------------
@@ -207,13 +217,17 @@ public class DivideAndConquerAlgorithms {
 			break;
 		case 1:
 			res = new MyDynamicList();
+			//if 0th index number is greater than or equal 'e' than adding this number to the 0th index
 			if (m.getElement(0) >= e)
 				res.addElement(0, m.getElement(0));
 			break;
 		case 2:
+			//getting 0th index number and storing it int e0
+			//then removing the elements from 0th index
 			int e0 = m.getElement(0);
 			m.removeElement(0);
 			res = biggerEqualMyList(m, e);
+			//if e0 number is bigger or equal than 'e' then adding that elements to the MyDynamicList 0th index
 			if (e0 >= e)
 				res.addElement(0, e0);
 			m.addElement(0, e0);

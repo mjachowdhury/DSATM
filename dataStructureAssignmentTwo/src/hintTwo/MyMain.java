@@ -48,9 +48,13 @@ public class MyMain {
 		System.out.println("\n----------- Test: recursiveDisplayElements -------------\n");
 
 		ex.recursiveDisplayElements(m1);
-
+		
+		System.out.println();
+		
 		ex.recursiveDisplayElements(m2);
-
+		
+		System.out.println();
+		
 		ex.recursiveDisplayElements(m3);
 
 		// ----------------------------
@@ -60,9 +64,13 @@ public class MyMain {
 
 		resM = ex.smallerMyList(m1, 9);
 		ex.recursiveDisplayElements(resM);
+		
+		System.out.println();
 
 		resM = ex.smallerMyList(m2, 9);
 		ex.recursiveDisplayElements(resM);
+		
+		System.out.println();
 
 		resM = ex.smallerMyList(m3, 6);
 		ex.recursiveDisplayElements(resM);
@@ -75,9 +83,13 @@ public class MyMain {
 		resM = ex.biggerEqualMyList(m1, 9);
 		ex.recursiveDisplayElements(resM);
 
+		System.out.println();
+		
 		resM = ex.biggerEqualMyList(m2, 9);
 		ex.recursiveDisplayElements(resM);
 
+		System.out.println();
+		
 		resM = ex.biggerEqualMyList(m3, 6);
 		ex.recursiveDisplayElements(resM);
 
@@ -89,9 +101,13 @@ public class MyMain {
 		resM = ex.concatenate(m1, m2);
 		ex.recursiveDisplayElements(resM);
 
+		System.out.println();
+		
 		resM = ex.concatenate(m2, m1);
 		ex.recursiveDisplayElements(resM);
 
+		System.out.println();
+		
 		resM = ex.concatenate(m2, m3);
 		ex.recursiveDisplayElements(resM);
 

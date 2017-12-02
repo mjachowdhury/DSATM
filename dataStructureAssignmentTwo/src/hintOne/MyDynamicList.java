@@ -27,7 +27,7 @@ public class MyDynamicList{
 
 	 
 	/*
-	 * Counts the no. of occurences of a node (search_for) in a linked list
+	 * Counts the no. of occurrences of a node (search_for) in a linked list
 	 * (head)
 	 */
 	int countNumberOfApperence(int search_for) 
